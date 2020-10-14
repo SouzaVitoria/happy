@@ -2,8 +2,12 @@ import express from "express";
 
 const app = express();
 
-app.get("/users", (request, response) => {
+app.get("/users/:id", (request, response) => {
+  console.log(request.query)
+  console.log(request.params)
+  console.log(request.body)
+
   return response.json({ message: "Hello World" });
 });
 
-app.listen(3333);
+app.listen(3333); 
