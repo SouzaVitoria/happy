@@ -1,6 +1,7 @@
 import express from "express";
 
 const app = express();
+app.use(express.json());
 
 app.get("/users/:id", (request, response) => {
   console.log(request.query)
